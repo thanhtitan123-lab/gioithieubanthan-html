@@ -46,6 +46,22 @@
         transform: translateY(-5px);
     }
 </style>
+        <!-- Phần code thêm vào để xử lý ẩn hiện nút -->
+<script>
+    $(document).ready(function(){
+        // Giả sử trang này là trang 1
+        var currentPage = 1; 
+        var totalPages = 3; // Tổng số trang bạn có
+
+        if (currentPage === 1) {
+            $(".pager li:first").hide(); // Ẩn nút "Previous" nếu là trang đầu
+        }
+        
+        if (currentPage === totalPages) {
+            $(".pager li:last").hide(); // Ẩn nút "Next" nếu là trang cuối
+        }
+    });
+</script>
 </head>
 
 <body>
